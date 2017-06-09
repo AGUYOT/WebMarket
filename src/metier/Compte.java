@@ -2,23 +2,13 @@ package metier;
 
 public class Compte {
 
-	private int isConnected = 0;
+	private boolean isConnected = false;
 	private int numCompte;
 	private String mailClient;
 	private String password;
 	
-	
-	
-	public Compte() {}
 
-	public Compte(int isConnected, int numCompte, String mailClient, String password) {
-		this.isConnected = isConnected;
-		this.numCompte = numCompte;
-		this.mailClient = mailClient;
-		this.password = password;
-	}
-
-	public int getIsConnected() {
+	public boolean getIsConnected() {
 		return isConnected;
 	}
 
@@ -34,7 +24,7 @@ public class Compte {
 		return password;
 	}
 
-	public void setIsConnected(int isConnected) {
+	public void setIsConnected(boolean isConnected) {
 		this.isConnected = isConnected;
 	}
 

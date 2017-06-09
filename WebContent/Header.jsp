@@ -1,5 +1,30 @@
+<%@ page import="java.sql.*" %>
+<jsp:useBean id="dbcnx" class="accesAuxDonnees.BDConnexion">
+
+<jsp:setProperty name= "dbcnx" property="login" value="p1517880"/>
+<jsp:setProperty name= "dbcnx" property="password" value="253884"/>
+<jsp:setProperty name= "dbcnx" property="hostname" value="iutdoua-web.univ-lyon1.fr"/>
+<jsp:setProperty name= "dbcnx" property="port" value=""/>
+<jsp:setProperty name= "dbcnx" property="nomDeLaBase" value="p1517880"/>
+</jsp:useBean>
+
+<jsp:useBean id="dblien" class="accesAuxDonnees.DBLien"/>
+
+<%
+	// Récupération de la connexion
+	Connection cnx = dbcnx.getCnx();
+%>
+
+<%
+// Création du tube de communication avec la base de données
+Statement lien = dblien.getLien(cnx);
+%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="metier.Compte" %>
+<%@ page import="javax.servlet.http.HttpSession;" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -28,8 +53,10 @@
         <li><a href="#">Accueil</a></li>
         <li><a href="#">Produits</a></li>
         <li><a href="#">Panier</a></li>
+        <% if()
+        	{ %>
         <li><a href="http://localhost:8080/WebProject/Connexion.jsp">Connexion</a></li>
-        
+        <% } %>
       </ul>
       <ul class="side-nav" id="mobile-demo">
        	<li><a href="#">Accueil</a></li>

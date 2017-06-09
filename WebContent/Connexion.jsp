@@ -459,12 +459,12 @@
     <form method="post">
       <div class="input-container">
         <input type="#type" id="#label" required="required"/>
-        <label for="#label">Username</label>
+        <label for="#label">Mail</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
         <input type="#type" id="#label" required="required"/>
-        <label for="#label">Password</label>
+        <label for="#label">Mot de passe</label>
         <div class="bar"></div>
       </div>
       <div class="button-container">
